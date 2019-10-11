@@ -49,4 +49,20 @@ public class PhoneBook {
     /**
      * TODO: please add required methods here
      */
+
+    public Set<String> findAllPhonesByName(String name){
+        return repository.findAllPhonesByName(name);
+    }
+
+    public String findNameByPhone(String phone){
+        return repository.findNameByPhone(phone);
+    }
+
+    public void addPhone(String name, String phone) {
+        repository.addPhone(name, phone);
+    }
+
+    public void removePhone(String phone){
+        repository.removePhone(phone);
+    }
 }

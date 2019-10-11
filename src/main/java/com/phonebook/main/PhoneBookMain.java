@@ -31,8 +31,23 @@ public class PhoneBookMain {
                 break;
             }
             try {
-                // TODO: add your code here
-                throw new UnsupportedOperationException("Implement it!");
+                String[] lineArgs = line.split("\\s");
+                switch (lineArgs[0]){
+                    case "ADD":
+                        String[] numbers = lineArgs[2].split(",");
+                        for (int i = 0; i < numbers.length; i++){
+                            phoneBook.addPhone(lineArgs[1], numbers[i].trim());
+                        }
+                        break;
+                    case "REMOVE_PHONE":
+                        phoneBook.removePhone(lineArgs[1]);
+                        break;
+                    case "SHOW":
+                        renderer.show(phoneBook.findAll());
+                        break;
+                    default:
+                        throw new UnsupportedOperationException("Operation not allowed");
+                }
             } catch (Exception e) {
                 renderer.error(e);
             }
