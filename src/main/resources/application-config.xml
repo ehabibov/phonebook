@@ -34,7 +34,7 @@
     </bean>
     <!-- autowiring byType -->
     <bean name="phoneBook" class="com.phonebook.spring.PhoneBook" autowire="byType">
-         <property name="repository" ref="inMemoryRepository"/>
+        <!--<property name="repository" ref="inMemoryRepository"/>-->
     </bean>
     <!-- properties injection -->
     <bean name="phoneBookFormatter" class="com.phonebook.spring.PhoneBookFormatter">

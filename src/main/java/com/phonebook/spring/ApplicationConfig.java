@@ -25,8 +25,8 @@ public class ApplicationConfig {
     @Bean
     public Map<String, Set<String>> defaultData() {
         Map<String, Set<String>> data = new LinkedHashMap<>();
-        data.put("Alex Wong", new HashSet<>(Arrays.asList("+79601232233")));
-        data.put("Billy Clark ", new HashSet<>(Arrays.asList("+79213215566", "+79213215567", "+79213215568")));
+        data.put("Alex", new HashSet<>(Arrays.asList("+79601232233")));
+        data.put("Billy", new HashSet<>(Arrays.asList("+79213215566", "+79213215567", "+79213215568")));
         return data;
     }
 
